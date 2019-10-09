@@ -6,8 +6,8 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: products
-    label: Products
+  - label: Products
+    name: products
     folder: content/products
     create: true
     fields:
@@ -16,13 +16,14 @@ collections:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
 
-  - name: pages
-    label: Pages
+  - label: Pages
+    name: pages
     files:
-      - name: about
-        label: About Page
+      - label: About Page
+        name: about
         file: content/pages/about.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
           - { label: Contents Heading, name: contentsHeading, widget: string }
+          - { label: Body, name: body, widget: markdown }
